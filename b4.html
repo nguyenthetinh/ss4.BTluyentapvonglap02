@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tt="<table >";
+    let n=prompt("Xin moi nhap chieu cao n");
+    let m=prompt("xin moi nhap chieu dai m");
+    for (let i=1;i<=n;i++) {
+        tt += "<tr>";
+        for (let j = 1; j <= m; j++) {
+            if (i >= 2 && j >= 2 && j <= m - 1 && i < n) {
+                tt += "<td>" + " " + "</td>";
+            } else {
+                tt += "<td>" + " *" + "</td>";
+            }
+        }
+        tt += "</tr>";
+    }
+    tt+="</table >";
+    document.write(tt);
+</script>
+</body>
+</html>

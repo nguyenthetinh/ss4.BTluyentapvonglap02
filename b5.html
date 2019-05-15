@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>CHUONG TRINH TINH LAI NGAN HANG</h3>
+<p>so tien cho vay</p>
+<input id="sotien" type="number"/>
+<p>so thang vay</p>
+<input id="sothang" type="number"/>
+<p>lai xuat hang thang</p>
+<input id="laisuat" type="number"/>
+<p>LAI NGAN HANG LA </p>
+<input type="button" value="Result" onclick="tinh()"/>
+<p id="rs"></p>
+<script>
+    function tinh() {
+        let tien=Number(document.getElementById("sotien").value);
+        let thang=Number(document.getElementById("sothang").value);
+        let lai=Number(document.getElementById("laisuat").value);
+        for (let i=1;i<=thang;i++) {
+            tong= tien * Math.pow((1+(lai/100)),i)
+            document.getElementById("rs").innerHTML= "tong ca von lan lai la:  " +tong
+        }
+    }
+</script>
+</body>
+</html>
